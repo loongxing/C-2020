@@ -4,4 +4,4 @@ Qt,C++开发飞机大战
 时间开始与2020-5-26
 飞行员XIAOYIHUI已就位
 
-飞行员XIAOYIHUI已就位
+飞行员jackqa1已就位
