@@ -13,12 +13,7 @@ background::background(gameControl &control):
     posx=0;
     posy=0;
     setPos(0,0);
-    //qDebug() << "Supported formats:" << QImageReader::supportedImageFormats();可以读取jpg文件
-//    qDebug()<<"222";
-    pix.load(GAME_BG);
-//    if(pix.isNull()){
-//        qDebug()<<"YES";
-//    }
+    pix.load(backgroundPath);
 }
 
 QRectF background::boundingRect() const
@@ -32,7 +27,7 @@ void background::paint(QPainter *painter, const QStyleOptionGraphicsItem *option
     painter->save();
     int w = pix.width(),h=pix.height();
     painter->drawPixmap(-5,posy,w,h,pix);
-    painter->drawPixmap(-5,posy-h,w,h,pix);
+    painter->drawPixmap(-5,posy-h,w,h,pix);  
     update();
     painter->restore();
 }

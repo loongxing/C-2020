@@ -16,11 +16,11 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     void advance(int phase);
     void setSpeed(int x);
-    bool isInView(const QPointF &p);
+    void handleCollision();
 private:
     QPixmap pix;
     gameControl &controller;
-    int speed;
+    int speed,idx;
 };
 
 #endif // MYPLANEBULLET_H

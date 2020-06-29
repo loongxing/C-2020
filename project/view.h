@@ -4,7 +4,6 @@
 #include <QObject>
 #include <QGraphicsView>
 #include <QIcon>
-#include <QSound>
 #include <QGraphicsScene>
 #include "gamecontrol.h"
 
@@ -15,7 +14,6 @@ public:
     explicit view(QWidget *parent = nullptr);
 private:
     QIcon *Icon;
-    QSound *Sound;
     QGraphicsScene *scene;
     gameControl *control;
 

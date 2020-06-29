@@ -5,9 +5,19 @@
 myPlaneBullet::myPlaneBullet(gameControl &control):
     controller(control)
 {
-    pix.load(":/image/res/bullet_11.png");
-
+    setData(GI_type, GT_myplaneBall);
     speed = 0;
+    idx=1;
+    if(attackStyle ==1 ){
+        pix.load(MYPLANE_BULLET);
+    }
+    else if(attackStyle == 2){
+        pix.load(":/image/res/bullet_9.png");
+    }
+    else if(attackStyle == 3){
+        pix.load(QString(":/image/res/sucai-%1.png").arg(idx));
+    }
+
 }
 
 QRectF myPlaneBullet::boundingRect() const
@@ -22,6 +32,7 @@ void myPlaneBullet::paint(QPainter *painter, const QStyleOptionGraphicsItem *opt
     if(!pix.isNull()){
         painter->save();
         int w = pix.width(), h = pix.height();
+        if(boundingRect() == QRectF(-15,-15,30,30)) painter->scale(3,3);
         painter->drawPixmap(QPoint(-w/2,-h/2),pix);
         painter->restore();
     }
@@ -30,8 +41,9 @@ void myPlaneBullet::paint(QPainter *painter, const QStyleOptionGraphicsItem *opt
 void myPlaneBullet::advance(int phase)
 {
     if(!phase)  return;
+    idx=idx%5+1;
     moveBy(0,-speed);//子弹往上走，即x坐标变小
-    if(!isInView(pos())){
+    if(!controller.isInView(pos())){
         controller.removeItem(*this);
     }
 }
@@ -39,10 +51,5 @@ void myPlaneBullet::advance(int phase)
 void myPlaneBullet::setSpeed(int x)
 {
     speed = x;
-}
-
-bool myPlaneBullet::isInView(const QPointF &p)
-{
-    return (p.x()<VIEW_WIDTH && p.x()>0) && (p.y()<VIEW_HEIGHT && p.y() >0);
 }
 

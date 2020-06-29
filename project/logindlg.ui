@@ -22,42 +22,12 @@
      <x>140</x>
      <y>100</y>
      <width>414</width>
-     <height>103</height>
+     <height>141</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="0" colspan="2">
-     <widget class="QLabel" name="label_3">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(253, 211, 255);</string>
-      </property>
-      <property name="text">
-       <string>流动地图：</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="4">
-     <widget class="QComboBox" name="comboBox_4">
-      <item>
-       <property name="text">
-        <string>开启</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>关闭</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="0" column="4">
-     <widget class="QComboBox" name="comboBox_3">
-      <item>
-       <property name="text">
-        <string>烈焰</string>
-       </property>
-      </item>
-     </widget>
+    <item row="2" column="2" colspan="3">
+     <widget class="QLineEdit" name="lineEdit"/>
     </item>
     <item row="2" column="0" colspan="2">
      <widget class="QLabel" name="label_5">
@@ -66,16 +36,6 @@
       </property>
       <property name="text">
        <string>用户名：</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="3">
-     <widget class="QLabel" name="label_4">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(253, 211, 255);</string>
-      </property>
-      <property name="text">
-       <string>上帝模式：</string>
       </property>
      </widget>
     </item>
@@ -89,8 +49,64 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="2" colspan="3">
-     <widget class="QLineEdit" name="lineEdit"/>
+    <item row="1" column="3">
+     <widget class="QLabel" name="label_4">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(253, 211, 255);</string>
+      </property>
+      <property name="text">
+       <string>游戏模式：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QComboBox" name="comboBox_3">
+      <item>
+       <property name="text">
+        <string>青青草原</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>失落城堡</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>西部荒原</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>机械迷城</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>沉沦地狱</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(253, 211, 255);</string>
+      </property>
+      <property name="text">
+       <string>地图:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(253, 211, 255);</string>
+      </property>
+      <property name="text">
+       <string>游戏音乐：</string>
+      </property>
+     </widget>
     </item>
     <item row="0" column="2">
      <widget class="QComboBox" name="comboBox">
@@ -125,14 +141,68 @@
       </item>
      </widget>
     </item>
-    <item row="0" column="3">
-     <widget class="QLabel" name="label_2">
+    <item row="1" column="4">
+     <widget class="QComboBox" name="comboBox_4">
+      <item>
+       <property name="text">
+        <string>冒险模式</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>无尽模式</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>无敌模式</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_6">
       <property name="styleSheet">
-       <string notr="true">color: rgb(253, 211, 255);</string>
+       <string notr="true">color: rgb(253, 211, 255);
+</string>
       </property>
       <property name="text">
-       <string>地图:</string>
+       <string>机型：</string>
       </property>
+     </widget>
+    </item>
+    <item row="3" column="1" colspan="3">
+     <widget class="QComboBox" name="Type">
+      <item>
+       <property name="text">
+        <string>雷霆号</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>凤凰号</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>森林号</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>紫电号</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>帝皇号</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>白虎号</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>
@@ -153,8 +223,8 @@
   <widget class="QPushButton" name="rank">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>210</y>
+     <x>170</x>
+     <y>250</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -171,8 +241,8 @@ font: italic 11pt &quot;Bahnschrift&quot;;</string>
   <widget class="QPushButton" name="Help">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>210</y>
+     <x>290</x>
+     <y>250</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -189,8 +259,8 @@ font: italic 9pt &quot;Bahnschrift&quot;;</string>
   <widget class="QPushButton" name="Ours">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>210</y>
+     <x>410</x>
+     <y>250</y>
      <width>101</width>
      <height>51</height>
     </rect>

@@ -9,6 +9,9 @@
 #include <QBitmap>
 #include"ui_logindlg.h"
 #include <QPixmap>
+#include "help.h"
+
+class help;
 
 namespace Ui {
 class LogInDlg;
@@ -44,6 +47,7 @@ private:
     void saveLoadMode();
     void saveDifficulty();
     void savePlayerName();
+    void savePlaneType();
 
 
 };

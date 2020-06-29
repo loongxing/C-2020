@@ -7,6 +7,7 @@
 
 int main(int argc, char *argv[])
 {
+    //QResource::registerResource(GAME_RES_PATH);
     QApplication a(argc, argv);
     LogInDlg dlg;
     dlg.show();
